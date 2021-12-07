@@ -15,7 +15,8 @@ Error:
 {"error":"user doesn't exist"}
 ```
 
-Update user (when not approved in previous step)
+Update user
+
 `curl -X PUT "http://brightdata.com/api/ext_cust" -H "Authorization: Bearer XXX" -H "Content-type: application/json" -d "{\"first_name\":\"John\",\"last_name\":\"Smith\",\"ip\":\"92.255.93.162\",\"email\":\"johnsmith@google.com\",\"country\":\"RU\"}"`
 
 OK:
