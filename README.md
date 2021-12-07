@@ -32,3 +32,11 @@ Error:
 ```js
 {"status":"suspisious_ip"}
 ```
+
+#### Open iframe
+
+After getting token open iframe (can be in modal dialog): `https://kyc.brightdata.com/#<token>`
+
+e.g.:
+https://kyc.brightdata.com/#98a718b94043a2c7f6da7d435f310c9b5b8f6ce921b22dae09a7ffa0ede04e85
+
