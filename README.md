@@ -55,7 +55,13 @@ window.cpp_kyc('#kyc', '98a718b94043a2c7f6da7d435f310c9b5b8f6ce921b22dae09a7ffa0
 	else // show reason of reject
 	   console.log('Decline reason: '+m.error);
 	break;
-    case 'app_wrapper_size': break;
+    case 'contact_us':
+	let {error} = m;
+	break;
+    case 'app_wrapper_size':
+	// resize event;
+	let {width, height} = m.size;
+	break;
     default: console.log('_____default', type, m); break;
   };
 });
