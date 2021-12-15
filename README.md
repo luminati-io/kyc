@@ -47,7 +47,7 @@ https://kyc.brightdata.com/#98a718b94043a2c7f6da7d435f310c9b5b8f6ce921b22dae09a7
 <h2>KYC</h2>
 <div id=kyc style="width: 700px; height: 300px" />
 <script>
-cpp_kyc('#kyc', '98a718b94043a2c7f6da7d435f310c9b5b8f6ce921b22dae09a7ffa0ede04e85', m=>{
+window.cpp_kyc('#kyc', '98a718b94043a2c7f6da7d435f310c9b5b8f6ce921b22dae09a7ffa0ede04e85', m=>{
   let {type} = m;
   switch (type) {
     case 'app_wrapper_size': console.log('__app'); break;
