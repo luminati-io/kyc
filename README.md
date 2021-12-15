@@ -50,7 +50,12 @@ https://kyc.brightdata.com/#98a718b94043a2c7f6da7d435f310c9b5b8f6ce921b22dae09a7
 window.cpp_kyc('#kyc', '98a718b94043a2c7f6da7d435f310c9b5b8f6ce921b22dae09a7ffa0ede04e85', m=>{
   let {type} = m;
   switch (type) {
-    case 'app_wrapper_size': console.log('__app'); break;
+    case 'verification_result':
+	if (m.approved); // approved actions
+	else // show reason of reject
+	   console.log('Decline reason: '+m.error);
+	break;
+    case 'app_wrapper_size': break;
     default: console.log('_____default', type, m); break;
   };
 });
