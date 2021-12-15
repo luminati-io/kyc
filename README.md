@@ -68,7 +68,7 @@ window.cpp_kyc('#kyc', '98a718b94043a2c7f6da7d435f310c9b5b8f6ce921b22dae09a7ffa0
 ```
 
 
-#### cpp_kyc including cpp.js
+#### cpp_kyc without including cpp.js
 ```js
 function cpp_kyc(selector, token, cb){
     let container = document.querySelector(selector);
