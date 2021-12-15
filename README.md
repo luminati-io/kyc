@@ -40,12 +40,26 @@ After getting token open iframe (can be in modal dialog): `https://kyc.brightdat
 e.g.:
 https://kyc.brightdata.com/#98a718b94043a2c7f6da7d435f310c9b5b8f6ce921b22dae09a7ffa0ede04e85
 
+
 #### Iframe example
 ```html
+<script src="https://kyc.brightdata.com/www/kyc/pub/cpp.js"></script>
 <h2>KYC</h2>
 <div id=kyc style="width: 700px; height: 300px" />
-
 <script>
+cpp_kyc('#kyc', '98a718b94043a2c7f6da7d435f310c9b5b8f6ce921b22dae09a7ffa0ede04e85', m=>{
+  let {type} = m;
+  switch (type) {
+    case 'app_wrapper_size': console.log('__app'); break;
+    default: console.log('_____default', type, m); break;
+  };
+});
+<script>
+```
+
+
+#### cpp_kyc including cpp.js
+```js
 function cpp_kyc(selector, token, cb){
     let container = document.querySelector(selector);
     el = document.createElement('iframe');
@@ -63,13 +77,4 @@ function cpp_kyc(selector, token, cb){
         cb(m.data);
     });
 }
-
-cpp_kyc('#kyc', '98a718b94043a2c7f6da7d435f310c9b5b8f6ce921b22dae09a7ffa0ede04e85', m=>{
-   let {type} = m;
-   switch (type) {
-   case 'app_wrapper_size': console.log('_app'); break;
-   default: console.log(type, m); break;
-   };
-})
-</script>
 ```
